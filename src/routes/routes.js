@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-// const ProductController = require('../controllers/products')
+const ProductController = require('../controllers/products')
 
 // router.get('/products/:id?', ProductController.get)
 // router.post('/products', ProductController.post)
@@ -8,12 +8,7 @@ const router = require('express').Router()
 // router.delete('/products/:id', ProductController.remove)
 
 
-router.get('/clientes', (req, res) => {
-  
-  res.send({
-    ok: 123
-  })
-})
+router.get('/products', ProductController.get)
 
 
 module.exports = router

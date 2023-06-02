@@ -7,7 +7,7 @@ const routes = require('./routes/routes')
 const app = express()
 
 // conexão com o banco de dados
-// db.connect()
+db.connect()
 
 // habilita CORS
 // const allowedOrigins = [
