@@ -10,25 +10,25 @@ async function get(req, res) {
   res.send(products)
 }
 
-// async function post(req, res) {
-//   const {
-//     name,
-//     brand,
-//     price,
-//   } = req.body
+async function post(req, res) {
+  const {
+    name,
+    brand,
+    price,
+  } = req.body
 
-//   const product = new ProductsModel({
-//     name,
-//     brand,
-//     price,
-//   })
+  const product = new ProductsModel({
+    name,
+    brand,
+    price,
+  })
 
-//   product.save()
+  product.save()
 
-//   res.send({
-//     message: 'success'
-//   })
-// }
+  res.send({
+    message: 'success'
+  })
+}
 
 // async function put(req, res) {
 //   const { id } = req.params
@@ -66,7 +66,7 @@ async function get(req, res) {
 
 module.exports = {
   get,
-  // post,
+  post,
   // put,
   // remove,
 }
