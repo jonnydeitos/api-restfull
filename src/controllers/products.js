@@ -30,27 +30,27 @@ async function post(req, res) {
   })
 }
 
-// async function put(req, res) {
-//   const { id } = req.params
+async function put(req, res) {
+  const { id } = req.params
 
-//   const product = await ProductsModel.findOneAndUpdate({ _id: id }, req.body, { new: true })
+  const product = await ProductsModel.findOneAndUpdate({ _id: id }, req.body, { new: true })
 
-//   res.send({
-//     message: 'success',
-//     product,
-//   })
+  res.send({
+    message: 'success',
+    product,
+  })
 
-//   /* 
-//   const product = await ProductsModel.findOne({ _id: id })
+  /* 
+  const product = await ProductsModel.findOne({ _id: id })
 
-//   await product.updateOne(req.body)
+  await product.updateOne(req.body)
 
-//   res.send({
-//     message: 'success',
-//     product,
-//   })
-//   */
-// }
+  res.send({
+    message: 'success',
+    product,
+  })
+  */
+}
 
 // async function remove(req, res) {
 //   const { id } = req.params
@@ -67,6 +67,6 @@ async function post(req, res) {
 module.exports = {
   get,
   post,
-  // put,
+  put,
   // remove,
 }
